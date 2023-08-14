@@ -2,6 +2,7 @@
 {
   public enum WindowId
   {
-    None
+    MainMenu,
+    Joystick
   }
 }
