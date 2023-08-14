@@ -1,10 +1,10 @@
 using System;
-using CodeBase.Infrastructure.Services.LoadingCurtain;
+using CodeBase.Services.LoadingCurtain;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace CodeBase.Infrastructure.Services.SceneLoader
+namespace CodeBase.Services.SceneLoader
 {
   public class SceneLoaderService : ISceneLoaderService
   {

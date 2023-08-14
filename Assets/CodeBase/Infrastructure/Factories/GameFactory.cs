@@ -1,5 +1,5 @@
-using CodeBase.Infrastructure.Services.Assets;
-using CodeBase.Infrastructure.Services.Progress;
+using CodeBase.Infrastructure.Assets;
+using CodeBase.Services.Progress;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Zenject;

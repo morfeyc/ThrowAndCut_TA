@@ -1,5 +1,5 @@
-using CodeBase.Infrastructure.Services.Assets;
-using CodeBase.Infrastructure.Services.StaticData;
+using CodeBase.Infrastructure.Assets;
+using CodeBase.Services.StaticData;
 using CodeBase.UI.Services.Window;
 using CodeBase.UI.Windows;
 using Cysharp.Threading.Tasks;

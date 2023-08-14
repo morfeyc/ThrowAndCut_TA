@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Infrastructure.Services.Assets
+﻿namespace CodeBase.Infrastructure.Assets
 {
   public static class AssetAddress
   {

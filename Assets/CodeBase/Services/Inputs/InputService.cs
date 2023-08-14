@@ -1,4 +1,4 @@
-﻿namespace CodeBase.Infrastructure.Services.Inputs
+﻿namespace CodeBase.Services.Inputs
 {
   public class InputService : IInputService
   {

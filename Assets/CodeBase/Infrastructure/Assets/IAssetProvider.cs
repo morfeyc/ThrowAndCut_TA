@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using UnityEngine.AddressableAssets;
 
-namespace CodeBase.Infrastructure.Services.Assets
+namespace CodeBase.Infrastructure.Assets
 {
   public interface IAssetProvider
   {

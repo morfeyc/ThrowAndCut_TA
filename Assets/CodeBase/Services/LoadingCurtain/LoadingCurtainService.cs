@@ -1,8 +1,8 @@
-﻿using CodeBase.Infrastructure.Factories;
-using CodeBase.Infrastructure.Services.Assets;
+﻿using CodeBase.Infrastructure.Assets;
+using CodeBase.Infrastructure.Factories;
 using Cysharp.Threading.Tasks;
 
-namespace CodeBase.Infrastructure.Services.LoadingCurtain
+namespace CodeBase.Services.LoadingCurtain
 {
   public class LoadingCurtainService : ILoadingCurtainService
   {

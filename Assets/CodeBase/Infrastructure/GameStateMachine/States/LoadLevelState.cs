@@ -1,6 +1,6 @@
 ﻿using CodeBase.Infrastructure.Factories;
 using CodeBase.Infrastructure.GameStateMachine.Provider;
-using CodeBase.Infrastructure.Services.SceneLoader;
+using CodeBase.Services.SceneLoader;
 
 namespace CodeBase.Infrastructure.GameStateMachine.States
 {

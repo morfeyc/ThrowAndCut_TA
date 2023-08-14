@@ -1,8 +1,7 @@
-﻿using CodeBase.UI.Services.Window;
-using CodeBase.UI.Windows;
+﻿using CodeBase.UI.Windows;
 using UnityEngine.AddressableAssets;
 
-namespace CodeBase.Infrastructure.Services.StaticData
+namespace CodeBase.Services.StaticData
 {
   public interface IStaticDataService
   {

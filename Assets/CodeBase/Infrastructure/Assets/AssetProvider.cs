@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
-namespace CodeBase.Infrastructure.Services.Assets
+namespace CodeBase.Infrastructure.Assets
 {
   public class AssetProvider : IAssetProvider, IInitializable, IDisposable
   {

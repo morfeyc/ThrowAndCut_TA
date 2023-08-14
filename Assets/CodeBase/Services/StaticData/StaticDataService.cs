@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using CodeBase.StaticData;
-using CodeBase.UI.Services.Window;
 using CodeBase.UI.Windows;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using Zenject;
 
-namespace CodeBase.Infrastructure.Services.StaticData
+namespace CodeBase.Services.StaticData
 {
   public class StaticDataService : IStaticDataService, IInitializable
   {
