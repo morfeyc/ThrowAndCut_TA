@@ -1,7 +1,7 @@
 using CodeBase.Data;
 using CodeBase.Infrastructure.GameStateMachine.Provider;
-using CodeBase.Infrastructure.Services.Progress;
-using CodeBase.Infrastructure.Services.SaveLoad;
+using CodeBase.Services.Progress;
+using CodeBase.Services.SaveLoad;
 
 namespace CodeBase.Infrastructure.GameStateMachine.States
 {

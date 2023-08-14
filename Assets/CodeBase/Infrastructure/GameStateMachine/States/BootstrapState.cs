@@ -1,5 +1,5 @@
 using CodeBase.Infrastructure.GameStateMachine.Provider;
-using CodeBase.Infrastructure.Services.LoadingCurtain;
+using CodeBase.Services.LoadingCurtain;
 using CodeBase.UI.Services.Factory;
 
 namespace CodeBase.Infrastructure.GameStateMachine.States
