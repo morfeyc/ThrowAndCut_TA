@@ -5,7 +5,7 @@ namespace Lib.Joystick_Pack
     public class JoyStick : MonoBehaviour
     {
         public static bool Enabled = true;
-        public static bool Active => _handle.gameObject.activeSelf;
+        public static bool Active => _handle != null && _handle.gameObject.activeSelf;
 
         private static Transform _handle;
         
@@ -35,7 +35,7 @@ namespace Lib.Joystick_Pack
             }
             else if (Input.GetMouseButton(0))
             {
-                var direction = Input.mousePosition - _start;
+                Vector3 direction = Input.mousePosition - _start;
                 direction = Vector3.ClampMagnitude(direction, 100f);
                 Handle.localPosition = direction;
                 if (direction.magnitude > 20f)

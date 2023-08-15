@@ -19,3 +19,9 @@ MonoBehaviour:
       m_SubObjectName: 
       m_SubObjectType: 
       m_EditorAssetChanged: 0
+  - Id: 1
+    AssetReference:
+      m_AssetGUID: 7ebd602a4e98f654aa0fc7445e4ccc77
+      m_SubObjectName: 
+      m_SubObjectType: 
+      m_EditorAssetChanged: 0
