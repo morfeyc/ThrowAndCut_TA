@@ -6,6 +6,7 @@ namespace CodeBase.UI.Services.Window
   {
     void Open(WindowId id);
     void Close(WindowId id);
+    void CloseAll();
     void CleanUp();
   }
 }
