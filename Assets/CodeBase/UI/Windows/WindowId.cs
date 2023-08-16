@@ -3,6 +3,7 @@
   public enum WindowId
   {
     MainMenu,
-    Joystick
+    Joystick,
+    LevelEnd
   }
 }

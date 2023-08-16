@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace Lib.Joystick_Pack
 {
@@ -6,6 +8,8 @@ namespace Lib.Joystick_Pack
     {
         public static bool Enabled = true;
         public static bool Active => _handle != null && _handle.gameObject.activeSelf;
+        public static bool StartDragging = false;
+        public static bool EndDragging = false;
 
         private static Transform _handle;
         
@@ -22,6 +26,9 @@ namespace Lib.Joystick_Pack
 
         private void Update()
         {
+            StartDragging = false;
+            EndDragging = false;
+            
             if (!Enabled)
             {
                 Hide();
@@ -32,6 +39,7 @@ namespace Lib.Joystick_Pack
             {
                 _start = Input.mousePosition;
                 Handle.gameObject.SetActive(true);
+                StartDragging = true;
             }
             else if (Input.GetMouseButton(0))
             {
@@ -42,6 +50,11 @@ namespace Lib.Joystick_Pack
                 {
                     transform.position = _start;
                 }
+            }
+            else if(Input.GetMouseButtonUp(0))
+            {
+                Hide();
+                EndDragging = true;
             }
             else
             {

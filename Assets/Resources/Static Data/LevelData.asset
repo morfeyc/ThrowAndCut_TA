@@ -17,3 +17,5 @@ MonoBehaviour:
     LevelNumber: 1
   - LevelKey: Level_2
     LevelNumber: 2
+  - LevelKey: Level_3_Empty
+    LevelNumber: 3

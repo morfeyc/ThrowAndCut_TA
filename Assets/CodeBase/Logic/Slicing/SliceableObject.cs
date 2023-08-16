@@ -1,15 +1,18 @@
-﻿using EzySlice;
+﻿using System;
+using EzySlice;
 using UnityEngine;
 
-namespace CodeBase.Logic
+namespace CodeBase.Logic.Slicing
 {
   public class SliceableObject : MonoBehaviour
   {
     [SerializeField] private Material _crossSectionMaterial;
-    
-    public void Slice(Vector3 position, Vector3 direction)
+
+    public Action OnSliced;
+
+    public void SliceIt(Vector3 position, Vector3 direction)
     {
-      SlicedHull hull = gameObject.Slice(transform.position, transform.up);
+      SlicedHull hull = gameObject.Slice(position, direction);
 
       if (hull != null)
       {
@@ -18,6 +21,7 @@ namespace CodeBase.Logic
         GameObject lowerHull = hull.CreateLowerHull(gameObject, _crossSectionMaterial);
         SetupSlicedObject(lowerHull);
 
+        OnSliced?.Invoke();
         Destroy(gameObject);
       }
     }
@@ -27,6 +31,8 @@ namespace CodeBase.Logic
       Rigidbody rigidbody = slice.AddComponent<Rigidbody>();
       MeshCollider meshCollider = slice.AddComponent<MeshCollider>();
       meshCollider.convex = true;
+      
+      rigidbody.AddExplosionForce(80, slice.transform.position, 1);
     }
   }
 }

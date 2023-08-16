@@ -1,6 +1,10 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Cinemachine;
+using CodeBase.Data;
 using CodeBase.Infrastructure.Assets;
+using CodeBase.Logic.PlayingCard;
+using CodeBase.Logic.Slicing;
+using CodeBase.Services.Progress;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -15,8 +19,11 @@ namespace CodeBase.Logic
     [SerializeField] private AssetReference _cardThrower;
     [SerializeField] private Transform _throwerStartPoint;
     [SerializeField] private Transform _throwerEndPoint;
+    [Space(15)] 
+    [SerializeField] private List<SliceableObject> _objectsToSlice;
 
     private IAssetProvider _assets;
+    private IProgressService _progressService;
 
     public override void InstallBindings()
     {
@@ -28,17 +35,18 @@ namespace CodeBase.Logic
     public async void Initialize()
     {
       _assets = Container.Resolve<IAssetProvider>();
+      _progressService = Container.Resolve<IProgressService>();
+      _progressService.Progress.LevelTask = new LevelTask(_objectsToSlice.Count);
 
       await InstantiateCardThrower();
-      _camera.Follow = _throwerStartPoint;
-      _camera.LookAt = _throwerEndPoint;
     }
 
     private async UniTask InstantiateCardThrower()
     {
       GameObject cardThrowerObj = await _assets.Load<GameObject>(_cardThrower);
-      Trajectory trajectory = Container.InstantiatePrefabForComponent<Trajectory>(cardThrowerObj);
-      trajectory.Init(_throwerStartPoint.position, _throwerEndPoint.position);
+      CardThrower cardThrower = Container.InstantiatePrefabForComponent<CardThrower>(cardThrowerObj);
+      
+      cardThrower.Init(_throwerStartPoint.position, _throwerEndPoint.position);
     }
   }
 }

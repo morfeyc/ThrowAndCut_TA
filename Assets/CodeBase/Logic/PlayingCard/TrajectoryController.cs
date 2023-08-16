@@ -2,13 +2,14 @@
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Logic
+namespace CodeBase.Logic.PlayingCard
 {
   public class TrajectoryController : MonoBehaviour
   {
+    [SerializeField] private CardThrower _cardThrower;
     [SerializeField] private Trajectory _trajectory;
     [SerializeField] private float _strength = 1f;
-    
+
     private IInputService _inputs;
 
     [Inject]
@@ -21,6 +22,7 @@ namespace CodeBase.Logic
     {
       if (_inputs.FingerDown)
       {
+        _trajectory.SetMiddlePositionOffset(Vector2.zero);
         _trajectory.Show();
       }
 
@@ -32,7 +34,6 @@ namespace CodeBase.Logic
       if (_inputs.FingerReleased)
       {
         _trajectory.Hide();
-        _trajectory.SetMiddlePositionOffset(Vector2.zero);
       }
     }
   }

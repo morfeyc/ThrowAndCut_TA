@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3268505792493160237}
   - component: {fileID: 7940037706995718}
   - component: {fileID: 7389354841136456718}
-  - component: {fileID: 915678199730710810}
+  - component: {fileID: 1313346440053457119}
   m_Layer: 5
   m_Name: JoysticWindow
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &915678199730710810
+--- !u!114 &1313346440053457119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,10 +87,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 989847058073090039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a2563d11024b5ebf62c324c44b8103, type: 3}
+  m_Script: {fileID: 11500000, guid: 1cf07f76d55641afacacaae08a5cbc55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 7940037706995718}
+  _joystick: {fileID: 8261866130651035842}
 --- !u!1001 &275629533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -210,3 +211,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8261866130380225820, guid: 37601273e42c8fa4e9fd1a86c931068d, type: 3}
   m_PrefabInstance: {fileID: 275629533}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8261866130651035842 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8261866130380225823, guid: 37601273e42c8fa4e9fd1a86c931068d, type: 3}
+  m_PrefabInstance: {fileID: 275629533}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add779700c79f9c43aac4b7e4d55aef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

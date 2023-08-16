@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 762b65732d6e822439dd217f1800db7c
+guid: 9e89f53e88cf5af43a04a6034d6d6ab9
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 769c60f1b029b1d48a501a7e23774fc6, type: 2}
+      name: Black
+    second: {fileID: 2100000, guid: b8501def9e1288047ad25fd05e06b3aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Target
+    second: {fileID: 2100000, guid: e3866dd0813d91b4299e8aa0d2a157ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodLegs
+    second: {fileID: 2100000, guid: 4719a3b485c476f43a07f456eb252295, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -37,7 +47,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1

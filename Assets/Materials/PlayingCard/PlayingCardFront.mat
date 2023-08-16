@@ -44,7 +44,7 @@ Material:
     - _Lumin: 0
     - _MaxLight: 1
     - _Metallic: 0
-    - _MinLight: 0.7
+    - _MinLight: 0.5
     - _NormalMapIntensity: 1
     - _Offset: 0
     - _Segmented: 1

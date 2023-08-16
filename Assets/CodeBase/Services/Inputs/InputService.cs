@@ -15,9 +15,9 @@ namespace CodeBase.Services.Inputs
     {
       JoystickOffset = JoyStick.Active ? JoyStick.Move : Vector2.zero;
 
-      FingerDown = Input.GetMouseButtonDown(0);
+      FingerDown = JoyStick.StartDragging;
       FingerDrag = JoyStick.Active;
-      FingerReleased = Input.GetMouseButtonUp(0);
+      FingerReleased = JoyStick.EndDragging;
     }
   }
 }
