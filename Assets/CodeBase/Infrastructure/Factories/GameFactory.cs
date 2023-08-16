@@ -24,7 +24,7 @@ namespace CodeBase.Infrastructure.Factories
 
     public async UniTask<T> InstantiateDIObject<T>(string assetKey) where T : MonoBehaviour
     {
-      GameObject objectToInstantiate = await _assets.Load<GameObject>(AssetAddress.LoadingCurtainKey);
+      GameObject objectToInstantiate = await _assets.Load<GameObject>(assetKey);
       T component = _diContainer.InstantiatePrefabForComponent<T>(objectToInstantiate, parentTransform: null);
       return component;
     }
@@ -34,6 +34,13 @@ namespace CodeBase.Infrastructure.Factories
       T component = await InstantiateDIObject<T>(assetKey);
       RegisterProgressWatchers(component.gameObject);
       return component;
+    }
+
+    public async UniTask<GameObject> CreateCard(Transform at)
+    {
+      GameObject cardPrefab = await _assets.Load<GameObject>(AssetAddress.Card);
+      GameObject createdCard = _diContainer.InstantiatePrefab(cardPrefab, at.position, at.rotation, null);
+      return createdCard;
     }
     
     private void RegisterProgressWatchers(GameObject gameObject)

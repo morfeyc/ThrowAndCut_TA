@@ -22,11 +22,27 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 6f008d9fb784009419eacba2573fd802
-    m_Address: Windows/None
+    m_Address: Windows/MainMenu
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 3e1caffa9234eaf4787fb88ac1158e50
     m_Address: LoadingCurtain
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7ebd602a4e98f654aa0fc7445e4ccc77
+    m_Address: Windows/JoysticWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e399b528711b5f848afb1490475086b1
+    m_Address: CardThrower
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0606eea1b000c2343bbaec8427255ab5
+    m_Address: PlayingCard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9a3918e93886eb8408b4877d90431672
+    m_Address: Windows/LevelEnd
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

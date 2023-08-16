@@ -141,6 +141,11 @@ namespace CodeBase.Infrastructure
         .BindInterfacesTo<LoadProgressState>()
         .AsSingle()
         .NonLazy();
+      
+      Container
+        .BindInterfacesTo<InMenuState>()
+        .AsSingle()
+        .NonLazy();
 
       Container
         .BindInterfacesTo<LoadLevelState>()

@@ -22,7 +22,7 @@ namespace CodeBase.Infrastructure.GameStateMachine.States
     {
       LoadProgressOrInitNew();
       
-      _stateMachineProvider.Value.Enter<LoadLevelState, string>("Main");
+      _stateMachineProvider.Value.Enter<InMenuState>();
     }
 
     public void Exit()

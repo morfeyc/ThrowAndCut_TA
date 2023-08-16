@@ -8,5 +8,6 @@ namespace CodeBase.Infrastructure.Factories
     UniTask<T> InstantiateDIObject<T>(string assetKey) where T : MonoBehaviour;
     UniTask<T> InstantiateDIObjectRegistered<T>(string assetKey) where T : MonoBehaviour;
     void Cleanup();
+    UniTask<GameObject> CreateCard(Transform at);
   }
 }

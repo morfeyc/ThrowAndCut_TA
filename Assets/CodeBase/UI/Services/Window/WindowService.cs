@@ -34,6 +34,12 @@ namespace CodeBase.UI.Services.Window
         cachedWindow.Close();
     }
 
+    public void CloseAll()
+    {
+      foreach (WindowBase window in _cachedWindows.Values) 
+        window.Close();
+    }
+
     public void CleanUp()
     {
       foreach (WindowBase window in _cachedWindows.Values)
